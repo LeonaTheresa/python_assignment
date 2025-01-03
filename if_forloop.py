@@ -19,7 +19,7 @@ for n in range(2, 1000):
             is_prime = False
             break  
     if is_prime:
-        print(n
+        print(n)
 
 
 #3.Print Odd Numbers from l down to 1 in Reverse
