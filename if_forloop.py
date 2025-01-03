@@ -11,12 +11,15 @@ else:
     print("It is a special character")
 
 
-#2.sum of first n numbers
-n = int(input("Enter value for n: "))  
-s=0 
-for i in range(1,n+1):
-    s = s+i
-print("Sum is ",s)
+#2.Write the python program to print all prime numbers less than 1000.(UQ-JUNE 2022)
+for n in range(2, 1000):
+    is_prime = True  
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: 
+            is_prime = False
+            break  
+    if is_prime:
+        print(n
 
 
 #3.Print Odd Numbers from l down to 1 in Reverse
@@ -27,22 +30,8 @@ for i in range(l,0,-2):
     print(i,end=" ")
 
 
-
-#4.Write the python program to print all prime numbers less than 1000.
-for n in range(2, 1000):
-    is_prime = True  
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0: 
-            is_prime = False
-            break  
-    if is_prime:
-        print(n)
-
-
-            
-
-#5.Write a python program to find out the eldest and youngest of three individuals ,with their ages being input through the keyboard.(without using max, min functions)
-age1=int(input("Enter age1"))
+#4.Write a python program to find out the eldest and youngest of three individuals ,with their ages being input through the keyboard.(without using max, min functions(UQ-MAY 2024)
+age1=int(input("Enter( age1"))
 age2=int(input("Enter age2"))
 age3=int(input("Enter age3"))
 if age1>age2 and age1>age3:
@@ -59,7 +48,7 @@ else:
      print("Youngest is ",age3)
 
 
-#6.Write a python program to print factorial of a given number.
+#5.Write a python program to print factorial of a given number.(UQ-MAY 2024)
 num = int(input("Enter a number: "))
 factorial = 1
 for i in range(1, num + 1):
@@ -67,7 +56,15 @@ for i in range(1, num + 1):
 print(f"The factorial of {num} is {factorial}")
 
 
-#7. Write a python program to find X^Y or pow(x,y) without using standard function
+#6.sum of first n numbers
+n = int(input("Enter value for n: "))  
+s=0 
+for i in range(1,n+1):
+    s = s+i
+print("Sum is ",s)
+
+
+#7. Write a python program to find X^Y or pow(x,y) without using standard function(UQ-JUNE 2023)
 x = int(input("Enter x: "))
 y = int(input("Enter y: "))
 result = 1
@@ -76,7 +73,7 @@ for _ in range(y):
 print(f"Result is {result}")
 
 
-#8.Write a program that accepts the lengths of three sides of a triangle as inputs andoutputs whether or not the triangle is a right triangle.
+#8.Write a program that accepts the lengths of three sides of a triangle as inputs andoutputs whether or not the triangle is a right triangle.(UQ-JAN 2024)
 side1 = int(input("Enter side1: "))
 side2 = int(input("Enter side2: "))
 side3 = int(input("Enter side3(largest side): "))
@@ -88,7 +85,7 @@ else:
 
 
 
-#9.Write a Python program to display the sum of odd numbers between a programmer specified upper and lower limit.
+#9.Write a Python program to display the sum of odd numbers between a programmer specified upper and lower limit.(UQ-MAY 2023)
 lower_limit = int(input("Enter the lower limit: "))
 upper_limit = int(input("Enter the upper limit: "))
 sum_of_odds = 0
@@ -98,9 +95,13 @@ for num in range(lower_limit, upper_limit + 1):
 print(f"The sum of odd numbers between {lower_limit} and {upper_limit} is: {sum_of_odds}")
 
 
-#10.Print Odd Numbers from l down to 1 in Reverse
-l = int(input("Enter value for l: ")) 
-if l%2==0:
-    l=l-1
-for i in range(l,0,-2):
-    print(i,end=" ")
+#10.Write a Python program to print all numbers between 100 and 1000 whose sum of digits is divisible by 9.(UQ-JAN 2024)
+for num in range(100, 1000):
+    hundreds = num // 100
+    tens = (num // 10) % 10
+    ones = num % 10
+    sum_of_digits = hundreds + tens + ones
+    if sum_of_digits % 9 == 0:
+        print(num)
+
+
